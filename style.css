@@ -126,12 +126,12 @@ header {
     -webkit-box-pack: center;
     justify-content: center;
     cursor: pointer;
-    background: rgb(233, 91, 40);
+    background: #e95c28;
     overflow: hidden;
 }
 
 .diamenu :hover{
-    background-color: #ddd;
+    background-color: #eb6c3d;
 }
 
 .diamenu h2{
@@ -155,7 +155,8 @@ header {
 }
 
 .selected {
-    background-color: #ddd;
+    background-color: #AF451E;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.36);
 }
   
 @media (min-width: 64em){
@@ -208,29 +209,20 @@ header {
 
 /* Estilos específicos das seções do cardápio */
 
-#assados h2 {
-    background-color: #F9AA33;
-    color: #FFF;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
 
-#acompanhamentos h2 {
+.secao h2 {
     background-color: #F9AA33;
     color: #FFF;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
-
-#saladas h2 {
-    background-color: #F9AA33;
-    color: #FFF;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 20px;
+  
+.conteudo {
+    display: block;
 }
+  
 
 /* Botão whatsapp */
 
@@ -283,12 +275,3 @@ header {
         bottom: 20px;
     }
 }
-  
-.conteudo {
-    display: block;
-}
-  
-.visivel {
-    display: none;
-}
-  
