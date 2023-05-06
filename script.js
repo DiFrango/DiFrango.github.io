@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    alert("Nosso cardápio ainda está em desenvolvimento, agradecemos a compreensão");
     var d = new Date(); // Cria um objeto Date com a data e hora atuais
     var weekday = d.getDay(); // Retorna o dia da semana (0-6), onde 0 é domingo e 6 é sábado
     if (weekday == 6) {
@@ -37,6 +36,7 @@ $(document).ready(function() {
       $('.secao').hide(); // Oculta todos os itens de menu
       $('.secao.' + dia).show();
     });
+    alert("Nosso cardápio ainda está em desenvolvimento, agradecemos a compreensão");
 
   });
   
