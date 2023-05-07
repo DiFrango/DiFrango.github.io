@@ -7,9 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5dc;
-    background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-color: rgb(246, 242, 233);
 }
 
 header, nav, main {
