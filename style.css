@@ -180,12 +180,37 @@ header {
     }
 }
 
+/* Estilos específicos das seções do cardápio */
+
+.secao h2 {
+    background-color: #F9AA33;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilos da disposição itens do cardápio */
+  
+.conteudo {
+    display: grid;
+    margin-top: 20px;
+}
+  
+@media (min-width: 64em) {
+    .conteudo{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px;
+        margin: 20px 0px 80px;
+    }    
+}
+
 /* Estilos dos itens do cardápio */
 
 .menu-item {
     display: grid;
     justify-content: space-between;    
-    margin: 0px 0px 25px;
+    margin: 0px 0px 0px;
     border: 1px solid #CCC;
     padding: 10px;
     border-radius: 4px;
@@ -232,28 +257,7 @@ header {
     color: #F9AA33;
 }
 
-/* Estilos específicos das seções do cardápio */
 
-
-.secao h2 {
-    background-color: #F9AA33;
-    color: #FFF;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-  
-.conteudo {
-    display: grid;
-}
-  
-@media (min-width: 64em) {
-    .conteudo{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 80px;
-    }    
-}
 /* Botão whatsapp */
 
 .whatsapp {
