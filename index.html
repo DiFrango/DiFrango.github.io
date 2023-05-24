@@ -150,7 +150,7 @@
                     <div class="item-desc">
                         <h1>Frango à passarinho</h1>
                         <p>Nossa porçao de frango frito com todas as partes do frango e nosso tempero especial da casa.</p>
-                        <p class="price">R$ 55,00</p>
+                        <p id="abrirfrito" class="price">Tabela</p>
                     </div>
                 </div>
                 <div class="menu-item sabado domingo">
@@ -160,7 +160,7 @@
                     <div class="item-desc">
                         <h1>Especial</h1>
                         <p>Nossa porção frita com as melhores partes selecionadas, coxinha da asa, coxa e sobrecoxa com o mesmo tempero especial.</p>
-                        <p class="price">R$ 68,00</p>
+                        <p id="abrirespecial" class="price">Tabela</p>
                     </div>
                 </div>
                 <div class="menu-item sabado domingo">
@@ -170,7 +170,7 @@
                     <div class="item-desc">
                         <h1>Tulipa</h1>
                         <p>Nossa porção de tulipa frita crocante por fora, macia por dentro, e com nosso tempero especial só dela.</p>
-                        <p class="price">R$ 68,00</p>
+                        <p id="abrirtulipa" class="price">Tabela</p>
                     </div>
                 </div>
             </div>
@@ -232,7 +232,7 @@
                     <div class="item-desc">
                         <h1>Maionese de legumes</h1>
                         <p>Nossa maionese com legumes selecionados para acompanhar sua refeição.</p>
-                        <p class="price">Tabela</p>
+                        <p id="abrirmaionese" class="price">Tabela</p>
                     </div>
                 </div>
                 <div class="menu-item sabado domingo">
@@ -242,7 +242,7 @@
                     <div class="item-desc">
                         <h1>Salpicão de frango</h1>
                         <p>Salada de legumes com frango desfiado.</p>
-                        <p class="price">R$ ??,00/kg</p>
+                        <p id="abrirsalpicao" class="price">Tabela</p>
                     </div>
                 </div>
                 <div class="menu-item sabado domingo">
@@ -262,7 +262,7 @@
                     <div class="item-desc">
                         <h1>Bifum</h1>
                         <p>Salada de macarrao japones.</p>
-                        <p class="price">R$ ??,00/kg</p>
+                        <p id="abrirbifum" class="price">Tabela</p>
                     </div>
                 </div>
                 <div class="menu-item sabado domingo">
@@ -272,7 +272,7 @@
                     <div class="item-desc">
                         <h1>Beringela ao vinagrete</h1>
                         <p>Salada de Beringela ao vinagrete.</p>
-                        <p class="price">R$ ??,00/kg</p>
+                        <p id="abrirvinagrete" class="price">Tabela</p>
                     </div>
                 </div>
                 <div class="menu-item sabado domingo">
@@ -282,7 +282,7 @@
                     <div class="item-desc">
                         <h1>Beringela à caponata</h1>
                         <p>Salada de Beringela à vinagrete.</p>
-                        <p class="price">R$ ??,00/kg</p>
+                        <p id="abrircaponata" class="price">Tabela</p>
                     </div>
                 </div>
             </div>
@@ -290,7 +290,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d646.6106849947091!2d-46.31486893221121!3d-23.540327551269446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7a65662216c3%3A0xd19534110b0421f4!2sAssados%20e%20Rotisserie%20D&#39;FRANGO!5e0!3m2!1spt-BR!2sbr!4v1684640291163!5m2!1spt-BR!2sbr" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
     <footer>
-        <p>Todos os produtos estão sujeitos a disponibilidade</p>
+        <p>Todos os produtos estão sujeitos a disponibilidade. Todos os pesos mencionados são aproximados.</p>
         <p>&copy; 2023 D'frango Assados e Rotisseria - Todos os direitos reservados</p>
     </footer>
     <a href="https://wa.me/+551147484632?" class="whatsapp" target="_blank">
@@ -300,7 +300,239 @@
         <div class="whatsapp-text">
             Encomende aqui
         </div>
-    </a>
+    </a>       
+
+    <!-- secao de modals -->    
+    <div id="frito" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Frango à passarinho</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Porção</th>
+                    <th>Quantidade</th>
+                    <th>Preços</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Inteira</td>
+                    <td>1200g</td>
+                    <td>55,00</td>
+                </tr>
+                <tr>
+                    <td>Meia</td>
+                    <td>600g</td>
+                    <td>35,00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="especial" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Especial/Tulipa</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Porção</th>
+                    <th>Quantidade</th>
+                    <th>Preços</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Inteira</td>
+                    <td>1200g</td>
+                    <td>68,00</td>
+                </tr>
+                <tr>
+                    <td>Meia</td>
+                    <td>600g</td>
+                    <td>40,00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="maionese" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Maionese de legumes</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Tamanhos</th>
+                    <th>Quantidade</th>
+                    <th>Preços</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grande</td>
+                        <td>1000g</td>
+                        <td>55,00</td>
+                    </tr>
+                    <tr>
+                        <td>Médio</td>
+                        <td>600g</td>
+                        <td>32,00</td>
+                    </tr>
+                    <tr>
+                        <td>Pequeno</td>
+                        <td>300g</td>
+                        <td>18,90</td>
+                    </tr>
+                    <tr>
+                        <td>Individual</td>
+                        <td>250</td>
+                        <td>14,90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="salpicao" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Salpicão de frango</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Tamanhos</th>
+                    <th>Quantidade</th>
+                    <th>Preços</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grande</td>
+                        <td>1000g</td>
+                        <td>55,00</td>
+                    </tr>
+                    <tr>
+                        <td>Médio</td>
+                        <td>600g</td>
+                        <td>32,00</td>
+                    </tr>
+                    <tr>
+                        <td>Pequeno</td>
+                        <td>300g</td>
+                        <td>18,90</td>
+                    </tr>
+                    <tr>
+                        <td>Individual</td>
+                        <td>250</td>
+                        <td>14,90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="bifum" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Bifum</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Tamanhos</th>
+                    <th>Quantidade</th>
+                    <th>Preços</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grande</td>
+                        <td>550g</td>
+                        <td>38,90</td>
+                    </tr>
+                    <tr>
+                        <td>Médio</td>
+                        <td>380g</td>
+                        <td>26,90</td>
+                    </tr>
+                    <tr>
+                        <td>Pequeno</td>
+                        <td>200g</td>
+                        <td>16,90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="vinagrete" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Berginela ao vinagrete</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Tamanhos</th>
+                    <th>Quantidade</th>
+                    <th>Preços</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grande</td>
+                        <td>400g</td>
+                        <td>38,90</td>
+                    </tr>
+                    <tr>
+                        <td>Médio</td>
+                        <td>260g</td>
+                        <td>26,90</td>
+                    </tr>
+                    <tr>
+                        <td>Pequeno</td>
+                        <td>160g</td>
+                        <td>16,90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="caponata" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Berginela à caponata</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Tamanhos</th>
+                    <th>Quantidade</th>
+                    <th>Preços</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grande</td>
+                        <td>400g</td>
+                        <td>38,90</td>
+                    </tr>
+                    <tr>
+                        <td>Médio</td>
+                        <td>260g</td>
+                        <td>26,90</td>
+                    </tr>
+                    <tr>
+                        <td>Pequeno</td>
+                        <td>160g</td>
+                        <td>16,90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
 

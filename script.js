@@ -36,6 +36,76 @@ $(document).ready(function() {
       $('.secao').hide(); // Oculta todos os itens de menu
       $('.secao.' + dia).show();
     });
+
+    //modais
+
+    //frito
+    $('#abrirfrito').click(function(){
+      $('#frito').css('display', 'block');
+    });
+
+    $('.fechar').click(function(){
+      $('#frito').css('display', 'none');
+    });
+
+    //especial/tulipa
+    $('#abrirespecial').click(function(){
+      $('#especial').css('display', 'block');
+    });
+    
+    $('#abrirtulipa').click(function(){
+      $('#especial').css('display', 'block');
+    });
+
+    $('.fechar').click(function(){
+      $('#especial').css('display', 'none');
+    });
+
+    //maionese    
+    $('#abrirmaionese').click(function(){
+      $('#maionese').css('display', 'block');
+    });
+
+    $('.fechar').click(function(){
+      $('#maionese').css('display', 'none');
+    });
+
+    //salpicao    
+    $('#abrirsalpicao').click(function(){
+      $('#salpicao').css('display', 'block');
+    });
+
+    $('.fechar').click(function(){
+      $('#salpicao').css('display', 'none');
+    });
+
+    //bifum    
+    $('#abrirbifum').click(function(){
+      $('#bifum').css('display', 'block');
+    });
+
+    $('.fechar').click(function(){
+      $('#bifum').css('display', 'none');
+    });
+
+    //vinagrete    
+    $('#abrirvinagrete').click(function(){
+      $('#vinagrete').css('display', 'block');
+    });
+
+    $('.fechar').click(function(){
+      $('#vinagrete').css('display', 'none');
+    });
+
+    //caponata    
+    $('#abrircaponata').click(function(){
+      $('#caponata').css('display', 'block');
+    });
+
+    $('.fechar').click(function(){
+      $('#caponata').css('display', 'none');
+    });
+
     alert("Nosso cardápio ainda está em desenvolvimento, agradecemos a compreensão");
 
   });
