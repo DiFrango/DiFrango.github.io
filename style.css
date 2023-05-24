@@ -193,13 +193,20 @@ header {
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
+    margin: 0px 0px 20px;
+}
+
+@media (min-width: 64em) {
+    .secao h2{
+        margin: 0px 0px 0px;
+    }
 }
 
 /* Estilos da disposição itens do cardápio */
   
 .conteudo {
     display: grid;
-    margin-top: 20px;
+    margin: 20px 0px 15px;
 }
   
 @media (min-width: 64em) {
@@ -215,7 +222,7 @@ header {
 .menu-item {
     display: grid;
     justify-content: space-between;    
-    margin: 0px 0px 0px;
+    margin: 0px 0px 25px;
     border: 1px solid #CCC;
     padding: 10px;
     border-radius: 4px;
@@ -234,6 +241,7 @@ header {
 @media(min-width: 64em){
     .menu-item{        
         grid-template-columns: [col1] 240px [col2] auto;
+        margin: 0px 0px 0px;
     }
 }
 
