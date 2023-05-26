@@ -261,6 +261,8 @@ header {
     text-align:end;
     align-items: end;
     font-size: 1.2em;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media(min-width: 23em){
