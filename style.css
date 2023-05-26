@@ -198,7 +198,7 @@ header {
 
 @media (min-width: 64em) {
     .secao h2{
-        margin: 0px 0px 0px;
+        margin: 0px 0px 20px;
     }
 }
 
@@ -213,7 +213,7 @@ header {
     .conteudo{
         grid-template-columns: repeat(2, 1fr);
         gap: 80px;
-        margin: 20px 0px 80px;
+        margin: 0px 0px 80px;
     }    
 }
 
@@ -232,19 +232,6 @@ header {
     align-items: start;
 }
 
-@media(min-width: 23em){
-    .menu-item{        
-        grid-template-columns: [col1] 140px [col2] auto;
-    }
-}
-
-@media(min-width: 64em){
-    .menu-item{        
-        grid-template-columns: [col1] 240px [col2] auto;
-        margin: 0px 0px 0px;
-    }
-}
-
 .item-img img {
     width: 100%;
     height: 100%;
@@ -259,15 +246,50 @@ header {
     max-width: 230px;
 }
 
-@media(min-width: 64em){
-    .item-desc h1{
-        font-size: 1.8em;
-    }
+.item-desc{
+    position: relative;
+    height: 135px;
 }
 
 .price {
+    position:absolute;
     font-weight: bold;
     color: #F9AA33;
+    margin-bottom: 0px;
+    bottom: 0;
+    right: 0;
+    text-align:end;
+    align-items: end;
+    font-size: 1.2em;
+}
+
+@media(min-width: 23em){
+    .menu-item{        
+        grid-template-columns: [col1] 140px [col2] auto;
+    }
+
+    .item-desc{
+        height: 157.5px;
+    }
+}
+
+@media(min-width: 64em){
+    .menu-item{        
+        grid-template-columns: [col1] 240px [col2] auto;
+        margin: 0px 0px 0px;
+    }
+
+    .item-desc h1{
+        font-size: 1.8em;
+    }
+
+    .item-desc{
+        height: 270px;
+    }
+
+    .price{
+        font-size: 2.1em;
+    }
 }
 
 /* Botão whatsapp */
@@ -335,10 +357,14 @@ header {
   
 .modal-conteudo {
     background-color: #fff;
-    margin: 20% auto;
     padding: 20px;
     width: 80%;
     max-width: 500px;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
  
 .modal-conteudo h2{
@@ -348,9 +374,11 @@ header {
 .fechar {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: -4px;
+    margin-right: 3px;
 }
   
 .fechar:hover,
@@ -363,6 +391,7 @@ header {
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
 }
   
 table th,
@@ -391,4 +420,23 @@ table th:nth-child(4),
 table td:nth-child(4) {
     width: 20%;
 }
-  
+
+@media (min-width: 64em) {
+    .modal-conteudo {
+        font-size: 1.2em;
+        max-width: 700px;
+    }
+
+    .modal-conteudo h2{
+        font-size: 2.5em;
+    }
+    
+    table {
+        margin-top: 15px;
+    }
+    
+    .fechar {
+        font-size: 40px;
+        margin-top: -4px;
+    }
+}
