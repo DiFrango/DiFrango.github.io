@@ -13,7 +13,7 @@ body {
 header, nav, main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 0 10px;
 }
 
 /* Estilos do cabeçalho */
@@ -65,30 +65,30 @@ header {
     font-size: 2em;
     font-family: "veneerregular";
     font-weight: 300;
-    color: #FFF;    
+    color: #FFF;
 }
 
 @media (min-width: 400px){
     .cardapio{
         background-size: 600px 500px;
-    }    
+    }
 }
 
 @media (min-width: 600px){
     .cardapio{
         background-size: 800px 666px;
         max-height: 190px;
-    }    
+    }
     
     .cardapio h1{
-        font-size: 3em;        
+        font-size: 3em;
     }
 }
 
 @media (min-width: 800px){
     .cardapio{
         background-size: 1200px 1000px;
-    }    
+    }
 }
 
 @media (min-width: 64em){
@@ -99,7 +99,7 @@ header {
     }
 
     .cardapio h1{
-        font-size: 3.5em;        
+        font-size: 3.5em;
     }
 }
 
@@ -110,11 +110,11 @@ header {
     margin: auto;
     column-gap: 5px;
     padding-top: 15px;
-    padding-bottom: 15px;    
+    padding-bottom: 15px;
     display: flex;
     flex-direction: row;
     justify-content:space-around;
-    align-items: center
+    align-items: center;
 }
 
 .diamenu-item{
@@ -185,6 +185,13 @@ header {
     }
 }
 
+/* Estilos da descrição*/
+
+.desc{
+    margin: 20px 0;
+    display: none;
+}
+
 /* Estilos específicos das seções do cardápio */
 
 .secao h2 {
@@ -208,20 +215,19 @@ header {
     display: grid;
     margin: 20px 0px 15px;
 }
-  
+
 @media (min-width: 64em) {
     .conteudo{
         grid-template-columns: repeat(2, 1fr);
         gap: 80px;
         margin: 0px 0px 80px;
-    }    
+    }
 }
 
 /* Estilos dos itens do cardápio */
 
 .menu-item {
     display: grid;
-    justify-content: space-between;    
     margin: 0px 0px 25px;
     border: 1px solid #CCC;
     padding: 10px;
@@ -266,7 +272,7 @@ header {
 }
 
 @media(min-width: 23em){
-    .menu-item{        
+    .menu-item{
         grid-template-columns: [col1] 140px [col2] auto;
     }
 
@@ -276,7 +282,7 @@ header {
 }
 
 @media(min-width: 64em){
-    .menu-item{        
+    .menu-item{
         grid-template-columns: [col1] 240px [col2] auto;
         margin: 0px 0px 0px;
     }
@@ -290,7 +296,7 @@ header {
     }
 
     .price{
-        font-size: 2.1em;
+        font-size: 2.2em;
     }
 }
 
@@ -315,19 +321,19 @@ header {
     transition: all 0.3s ease-in-out;
     bottom: 30px;
 }
-  
+
 .whatsapp:hover {
     transform: scale(1.05);
 }
-  
+
 .whatsapp .whatsapp-icon {
     font-size: 38px;
 }
-  
+
 .whatsapp .whatsapp-text {
     display: none;
 }
-  
+
 .whatsapp:hover .whatsapp-text {
     display: block;
     position: absolute;
@@ -356,7 +362,7 @@ header {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
-  
+
 .modal-conteudo {
     background-color: #fff;
     padding: 20px;
@@ -368,7 +374,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
- 
+
 .modal-conteudo h2{
     font-size: 2em;
 }
@@ -382,42 +388,42 @@ header {
     margin-top: -4px;
     margin-right: 3px;
 }
-  
+
 .fechar:hover,
 .fechar:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
-  
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
-  
+
 table th,
 table td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
-  
+
 table th:first-child,
 table td:first-child {
     width: 25%;
 }
-  
+
 table th:nth-child(2),
 table td:nth-child(2) {
     width: 35%;
 }
-  
+
 table th:nth-child(3),
 table td:nth-child(3) {
     width: 20%;
 }
-  
+
 table th:nth-child(4),
 table td:nth-child(4) {
     width: 20%;

@@ -38,6 +38,15 @@
     </div>
 
     <main>
+        <div class="desc sabado">
+            <p>Nosso assados disponíveis a partir das 11:00, estaremos abertos até as 17:00, encomende pelo whatsapp ou telefone.</p>
+        </div>
+        <div class="desc domingo">
+            <p>Nosso assados disponíveis a partir das 10:30, estaremos abertos até as 15:00, encomende pelo whatsapp ou telefone.</p>
+        </div>
+        <div class="desc festivo">
+            <p>Cardapio disponível apenas por encomenda prévia de 2 semanas, preços sob orçamento</p>
+        </div>
         <section class="secao sabado domingo">
             <h2>Frangos</h2>
             <div class="conteudo">
@@ -94,7 +103,7 @@
                     <div class="item-desc">
                         <h1>Costela de boi</h1>
                         <p></p>
-                        <p class="price">R$ ??,00</p>
+                        <p class="price">R$ 89,00</p>
                     </div>
                 </div>
                 <div class="menu-item domingo">
@@ -104,7 +113,7 @@
                     <div class="item-desc">
                         <h1>Cupim</h1>
                         <p></p>
-                        <p class="price">R$ ??,00</p>
+                        <p class="price">R$ 89,00</p>
                     </div>
                 </div>
                 <div class="menu-item domingo">
@@ -114,7 +123,7 @@
                     <div class="item-desc">
                         <h1>Paleta bovina</h1>
                         <p></p>
-                        <p class="price">R$ ??,00/kg</p>
+                        <p class="price">R$ 89,00/kg</p>
                     </div>
                 </div>
                 <div class="menu-item domingo">
@@ -124,7 +133,7 @@
                     <div class="item-desc">
                         <h1>Costelinha de porco</h1>
                         <p></p>
-                        <p class="price">R$ ??,00/kg</p>
+                        <p class="price">R$ 92,00/kg</p>
                     </div>
                 </div>
                 <div class="menu-item festivo">
@@ -196,7 +205,7 @@
                     <div class="item-desc">
                         <h1>Arroz Branco</h1>
                         <p>Arroz branco soltinho, ideal para acompanhar assados.</p>
-                        <p class="price">R$ ??,00/kg</p>
+                        <p id="abrirarrozbranco" class="price">Preços</p>
                     </div>
                 </div>
                 <div class="menu-item sabado domingo">
@@ -206,7 +215,7 @@
                     <div class="item-desc">
                         <h1>Arroz á grega</h1>
                         <p>Arroz com legumes e bem soltinho.</p>
-                        <p class="price">R$ ??,00/kg</p>
+                        <p id="abrirarrozgrega" class="price">Preço</p>
                     </div>
                 </div>
                 <div class="menu-item sabado domingo">
@@ -257,16 +266,6 @@
                 </div>
                 <div class="menu-item sabado domingo">
                     <div class="item-img">
-                        <img src="sources/testes/none.png" alt="sem imagem">
-                    </div>
-                    <div class="item-desc">
-                        <h1>Takenoko</h1>
-                        <p>Salada oriental de broto de bambu.</p>
-                        <p class="price">R$ ??,00/kg</p>
-                    </div>
-                </div>
-                <div class="menu-item sabado domingo">
-                    <div class="item-img">
                         <img src="sources/testes/bifum.png" alt="sem imagem">
                     </div>
                     <div class="item-desc">
@@ -293,6 +292,16 @@
                         <h1>Beringela à caponata</h1>
                         <p>Salada de Beringela à vinagrete.</p>
                         <p id="abrircaponata" class="price">Preços</p>
+                    </div>
+                </div>
+                <div class="menu-item sabado domingo">
+                    <div class="item-img">
+                        <img src="sources/testes/none.png" alt="sem imagem">
+                    </div>
+                    <div class="item-desc">
+                        <h1>Takenoko</h1>
+                        <p>Salada oriental de broto de bambu.</p>
+                        <p id="abrirtakenoko" class="price">Preços</p>
                     </div>
                 </div>
             </div>
@@ -364,6 +373,72 @@
                     <td>600g</td>
                     <td>40,00</td>
                 </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="arrozbranco" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Arroz branco</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Tamanhos</th>
+                    <th>Quantidade</th>
+                    <th>Preços</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grande</td>
+                        <td>550g</td>
+                        <td>22,90</td>
+                    </tr>
+                    <tr>
+                        <td>Médio</td>
+                        <td>350g</td>
+                        <td>14,90</td>
+                    </tr>
+                    <tr>
+                        <td>Pequeno</td>
+                        <td>200g</td>
+                        <td>7,90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="arrozgrega" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Arroz à grega</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Tamanhos</th>
+                    <th>Quantidade</th>
+                    <th>Preços</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grande</td>
+                        <td>550g</td>
+                        <td>24,90</td>
+                    </tr>
+                    <tr>
+                        <td>Médio</td>
+                        <td>350g</td>
+                        <td>16,90</td>
+                    </tr>
+                    <tr>
+                        <td>Pequeno</td>
+                        <td>200g</td>
+                        <td>8,90</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -538,6 +613,39 @@
                         <td>Pequeno</td>
                         <td>160g</td>
                         <td>16,90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="takenoko" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Takenoko</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Tamanhos</th>
+                    <th>Quantidade</th>
+                    <th>Preços</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grande</td>
+                        <td>450g</td>
+                        <td>36,90</td>
+                    </tr>
+                    <tr>
+                        <td>Médio</td>
+                        <td>300g</td>
+                        <td>24,90</td>
+                    </tr>
+                    <tr>
+                        <td>Pequeno</td>
+                        <td>180g</td>
+                        <td>12,90</td>
                     </tr>
                 </tbody>
             </table>
