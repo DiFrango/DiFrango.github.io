@@ -234,7 +234,7 @@ header {
     border-radius: 4px;
     background-color: #FFF;
     grid-template-columns: [col1] 120px [col2] auto;
-    gap: 25px;
+    gap: 15px;
     align-items: start;
 }
 
@@ -245,16 +245,20 @@ header {
     object-fit: contain;
 }
 
-.item-desc h1 {
+.item-container h1 {
     margin-bottom: 10px;
     margin: 0px;
     font-size: 1.5em;
     max-width: 230px;
 }
 
-.item-desc{
+.item-container{
     position: relative;
-    height: 135px;
+    min-height: 135px;
+}
+
+.item-desc{
+    padding-bottom: 27px;
 }
 
 .price {
@@ -266,7 +270,7 @@ header {
     right: 0;
     text-align:end;
     align-items: end;
-    font-size: 1.2em;
+    font-size: 1.3em;
     cursor: pointer;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -274,9 +278,10 @@ header {
 @media(min-width: 23em){
     .menu-item{
         grid-template-columns: [col1] 140px [col2] auto;
+        gap: 25px;
     }
 
-    .item-desc{
+    .item-container{
         height: 157.5px;
     }
 }
@@ -287,11 +292,11 @@ header {
         margin: 0px 0px 0px;
     }
 
-    .item-desc h1{
+    .item-container h1{
         font-size: 1.8em;
     }
 
-    .item-desc{
+    .item-container{
         height: 270px;
     }
 
