@@ -6,11 +6,11 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(246, 242, 233);
+    font-family: 'Montserrat', sans-serif;
+    background: #F2F2F2;
 }
 
-header, nav, main {
+nav, main, .header, .footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
@@ -18,22 +18,62 @@ header, nav, main {
 
 /* Estilos do cabeçalho */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #F9AA33;
-    color: #FFF;
+    width: 100%;
+    background-color: #FFFFFF;
 }
 
-.logo img {
+.header{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    color: #000;
+    padding: 5px;
+}
+
+.header-1{
+    display: flex;
+    width: 380px;
+    font-size: 14px;
+    font-weight: 600;
+    justify-self: left;
+}
+
+.header-1 p{
+    margin-left: 2px;
+    padding: 3px;
+}
+
+.header-2{
+    justify-self: center;
+}
+
+.header-2 img{
     max-width: 150px;
 }
 
-.header-contact a {
-    color: #FFF;
-    margin-left: 20px;
+.header-3{
+    display: flex;
+    justify-self: right;
+
+}
+
+.header-3 p{
+    color: #EA2F2F;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.header-3 a {
+    color: #fff;
     text-decoration: none;
     font-size: 1em;
+    border-radius: 8px;
+    background: #EA2F2F;
+    display: flex;
+    padding: 8px 10px;
+    align-items: center;
+    gap: 4px;
 }
 
 /* sub texto do navegador*/
@@ -106,59 +146,44 @@ header {
 /* Estilo do navegador do dia */
 
 .diamenu{
-    width: 100%;
-    margin: auto;
-    column-gap: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
     display: flex;
-    flex-direction: row;
-    justify-content:space-around;
+    padding: 12px 16px;
     align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+    border-radius: 16px;
+    background: #FFF;
+    margin: auto auto 20px;
 }
 
 .diamenu-item{
-    width: 115px;
-    height: 60px;
-    border-radius: 8px;
-    position: relative;
     display: flex;
-    -webkit-box-align: center;
+    padding: 8px;
     align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
-    cursor: pointer;
-    background: #e95c28;
-    overflow: hidden;
+    border-radius: 8px;
+    flex: 1 0 0;
 }
 
 .diamenu :hover{
-    background-color: #eb6c3d;
+    background-color: #ffc84f;
 }
 
 .diamenu h2{
-    font-family: Arial, sans-serif;
-    color: rgb(255, 255, 255);
-    font-weight: 400;
-    max-width: 60px;
-    width: 100%;
-    height: 100%;
-    font-size: 1em;
-    position: absolute;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-    z-index: 5;
+    color: #3C1518;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 66.667% */
 }
 
 .selected {
-    background-color: #AF451E;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.36);
+    display: flex;
+    padding: 16px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    background: #FFBB24;
 }
   
 @media (min-width: 64em){
@@ -168,7 +193,6 @@ header {
 
     .diamenu {
         margin-top: 25px;
-        padding-bottom: 25px;
         column-gap: 25px;
         max-width: 1200px;
         overflow: unset;
@@ -179,7 +203,7 @@ header {
     }
 
     .diamenu-item{
-        height: 100px;
+        height: 40px;
         width: 100%;
         font-size: 2em;
     }
@@ -188,15 +212,15 @@ header {
 /* Estilos da descrição*/
 
 .desc{
-    margin: 20px 0;
+    margin-bottom: 20px;
     display: none;
 }
 
 /* Estilos específicos das seções do cardápio */
 
 .secao h2 {
-    background-color: #F9AA33;
-    color: #FFF;
+    font-size: 38px;
+    color: #000;
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
@@ -264,15 +288,39 @@ header {
 .price {
     position:absolute;
     font-weight: bold;
-    color: #F9AA33;
-    margin-bottom: 0px;
+    color: #ff0000;
+    margin-bottom: 0;
     bottom: 0;
     right: 0;
     text-align:end;
     align-items: end;
     font-size: 1.3em;
-    cursor: pointer;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tabela{
+    position:absolute;
+    font-weight: bold;
+    background-color: #ea2f2f;
+    color: #fff;
+    margin-bottom: 0;
+    bottom: 0;
+    right: 0;
+    text-align:end;
+    align-items: end;
+    font-size: 1.3em;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+}
+
+.tabela img{
+    display: flex;
+    color: #FFFFFF;
+    max-width: 25px;
+    align-self: end;
+    margin-left: 4px;
 }
 
 @media(min-width: 23em){
@@ -303,6 +351,34 @@ header {
     .price{
         font-size: 2.2em;
     }
+
+    .tabela{
+        font-size: 1.3em;
+    }
+}
+
+footer{
+    width: 100%;
+    background: #EA2F2F;
+    color: #FFFFFF;
+    padding-bottom: 16px;
+}
+
+footer iframe{
+    margin: 15px 0 5px 0;
+    border-radius: 25px;
+}
+
+footer .linha{
+    width: 100%;
+    height: 2px;
+    background: #BB1E1E;
+    margin-bottom: 10px;
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
 }
 
 /* Botão whatsapp */
@@ -378,6 +454,7 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 15px;
 }
 
 .modal-conteudo h2{
