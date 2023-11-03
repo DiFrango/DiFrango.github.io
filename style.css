@@ -986,11 +986,10 @@ nav, main, .footer {
     .item-container{
         position: relative;
         min-height: 135px;
-        height: 157.5px;
     }
 
     .item-desc{
-        padding-bottom: 27px;
+        padding-bottom: 37px;
     }
 
     .price {
@@ -1016,7 +1015,7 @@ nav, main, .footer {
         right: 0;
         text-align:end;
         align-items: center;
-        font-size: 0.9em;
+        font-size: 1em;
         padding: 5px;
         cursor: pointer;
         border-radius: 5px;
