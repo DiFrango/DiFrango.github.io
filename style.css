@@ -793,7 +793,73 @@ nav, main, .footer {
 }
 
 /* Celular*/
-@media (min-width: 23em) and (max-width: 34.2em) {
+@media (max-width: 34.2em) {
+    header {
+        width: 100%;
+        background-color: #FFFFFF;
+    }
+
+    .header{
+        display: grid;
+        grid-template-areas:
+    "barra barra"
+    ". .";
+    }
+
+    .header-1{
+        display: flex;
+        background: #EA2F2F;
+        color: #FFFFFF;
+        justify-content: center;
+        padding: 8px;
+        grid-area: barra;
+        font-size: 0.8em;
+    }
+
+    .header-1 svg{
+        display: none;
+    }
+
+    .header-2, .header-3{
+        display: flex;
+        max-width: 1200px;
+        align-items: center;
+    }
+
+    .header-2{
+        justify-self: left;
+        padding: 10px 5px 10px 10px;
+    }
+
+    .header-2 img{
+        max-width: 150px;
+    }
+
+    .header-3{
+        display: flex;
+        justify-self: right;
+        padding: 10px 10px 10px 5px;
+    }
+
+    .header-3 p{
+        color: #EA2F2F;
+        align-self: center;
+        margin-right: 10px;
+        display: none;
+    }
+
+    .header-3 a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1em;
+        border-radius: 8px;
+        background: #EA2F2F;
+        display: flex;
+        padding: 8px 10px;
+        align-items: center;
+        gap: 4px;
+    }
+
     .cardapio{
         max-width: 1200px;
         max-height: 140px;
@@ -920,6 +986,7 @@ nav, main, .footer {
     .item-container{
         position: relative;
         min-height: 135px;
+        height: 157.5px;
     }
 
     .item-desc{
@@ -935,7 +1002,7 @@ nav, main, .footer {
         right: 0;
         text-align:end;
         align-items: end;
-        font-size: 1.3em;
+        font-size: 1.6em;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
@@ -948,12 +1015,13 @@ nav, main, .footer {
         bottom: 0;
         right: 0;
         text-align:end;
-        align-items: end;
-        font-size: 1.3em;
-        padding: 10px;
+        align-items: center;
+        font-size: 0.9em;
+        padding: 5px;
         cursor: pointer;
         border-radius: 5px;
         display: flex;
+        align-self: center;
     }
 
     .tabela img{
@@ -1110,87 +1178,6 @@ nav, main, .footer {
     table th:nth-child(4),
     table td:nth-child(4) {
         width: 20%;
-    }
-
-
-
-
-    header {
-        width: 100%;
-        background-color: #FFFFFF;
-    }
-
-    .header{
-        display: grid;
-        grid-template-areas:
-    "barra barra"
-    ". .";
-    }
-
-    .header-1{
-        display: flex;
-        background: #EA2F2F;
-        color: #FFFFFF;
-        justify-content: center;
-        padding: 8px;
-        grid-area: barra;
-        font-size: 0.8em;
-    }
-
-    .header-1 svg{
-        display: none;
-    }
-
-    .header-2, .header-3{
-        display: flex;
-        max-width: 1200px;
-        align-items: center;
-    }
-
-    .header-2{
-        justify-self: left;
-        padding: 10px 5px 10px 10px;
-    }
-
-    .header-2 img{
-        max-width: 150px;
-    }
-
-    .header-3{
-        display: flex;
-        justify-self: right;
-        padding: 10px 10px 10px 5px;
-    }
-
-    .header-3 p{
-        color: #EA2F2F;
-        align-self: center;
-        margin-right: 10px;
-        display: none;
-    }
-
-    .header-3 a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1em;
-        border-radius: 8px;
-        background: #EA2F2F;
-        display: flex;
-        padding: 8px 10px;
-        align-items: center;
-        gap: 4px;
-    }
-    .menu-item{
-        grid-template-columns: [col1] 140px [col2] auto;
-        gap: 25px;
-    }
-
-    .item-container{
-        height: 157.5px;
-    }
-
-    .price{
-        font-size: 1.8em;
     }
 
 }
