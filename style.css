@@ -15,14 +15,300 @@ nav, main, .footer {
     margin: 0 auto;
     padding: 0 10px;
 }
+/*
+    ESTILOS GLOBAIS
+*/
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+.header-1 {
+    display: flex;
+}
+.header-2 img{
+    max-width: 150px;
+}
+.header-3{
+    display: flex;
+    justify-self: right;
+}
+.header-3 p{
+    color: #EA2F2F;
+    align-self: center;
+    margin-right: 10px;
+}
+.header-3 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 8px;
+    background: #EA2F2F;
+    display: flex;
+    padding: 8px 10px;
+    align-items: center;
+    gap: 4px;
+}
+
+
+/* Banner */
+.cardapio{
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    border-radius: 8px;
+    background-color: rgb(233, 91, 45);
+    order: 0;
+    text-align: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    background-image: url('sources/Cardapio.jpg');
+    background-position: 50% 50%;
+    height: calc(100vh - 155px);
+    background-repeat: no-repeat;
+}
+.cardapio h1{
+    font-family: "veneerregular", sans-serif;
+    font-weight: 300;
+    color: #FFF;
+}
+
+
+/* Menu de dias */
+.diamenu{
+    display: flex;
+    background: #FFF;
+    padding: 12px 16px;
+    align-items: center;
+    border-radius: 16px;
+    flex: 1 0 0;
+}
+.diamenu :hover {
+    background-color: #ffc84f;
+}
+.diamenu h2{
+    color: #3C1518;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 16px;
+}
+.diamenu-item{
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex: 1 0 0;
+}
+.selected {
+    display: flex;
+    padding: 16px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    background: #FFBB24;
+}
+.desc{
+    margin-bottom: 20px;
+    display: none;
+}
+
+
+/* Seção e conteudo */
+.secao h2{
+    margin: 0 0 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #000;
+    padding: 10px;
+}
+.conteudo {
+    display: grid;
+}
+.menu-item {
+    display: grid;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    gap: 15px;
+    align-items: start;
+}
+.item-img img {
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+    object-fit: contain;
+}
+.item-container{
+    position: relative;
+    min-height: 135px;
+}
+.item-container h1 {
+    margin: 0;
+    max-width: 230px;
+}
+.price {
+    position: absolute;
+    font-weight: bold;
+    color: #ff0000;
+    margin-bottom: 0;
+    bottom: 0;
+    right: 0;
+    text-align: end;
+    align-items: end;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.tabela{
+    display: flex;
+    position:absolute;
+    font-weight: bold;
+    background-color: #ea2f2f;
+    color: #fff;
+    margin-bottom: 0;
+    bottom: 0;
+    right: 0;
+    text-align:end;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.tabela img{
+    display: flex;
+    color: #FFFFFF;
+    max-width: 25px;
+    align-self: end;
+    margin-left: 4px;
+}
+
+
+/* Footer */
+footer{
+    width: 100%;
+    background: #EA2F2F;
+    color: #FFFFFF;
+    padding-bottom: 16px;
+}
+footer iframe{
+    margin: 15px 0 5px 0;
+    border-radius: 25px;
+}
+footer .linha{
+    width: 100%;
+    height: 2px;
+    background: #BB1E1E;
+    margin-bottom: 10px;
+}
+footer p{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* WhatsApp */
+.whatsapp{
+    position: fixed;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #25d366;
+    width: 65px;
+    height: 65px;
+    border-radius: 100px;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+.whatsapp:hover {
+    transform: scale(1.05);
+}
+.whatsapp .whatsapp-icon {
+    font-size: 38px;
+}
+.whatsapp .whatsapp-text {
+    display: none;
+}
+.whatsapp:hover .whatsapp-text {
+    display: block;
+    position: absolute;
+    right: 100%;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #25d366;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-conteudo {
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+.fechar {
+    color: #aaa;
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 3px;
+    margin-top: -4px;
+}
+.fechar:hover, .fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Tabela do modal */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table th, table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+table th:first-child, table td:first-child {
+    width: 25%;
+}
+table th:nth-child(2), table td:nth-child(2) {
+    width: 35%;
+}
+table th:nth-child(3), table td:nth-child(3) {
+    width: 20%;
+}
+table th:nth-child(4), table td:nth-child(4) {
+    width: 20%;
+}
 
 /* Desktop */
 @media (min-width: 64em) {
-
-    header {
-        width: 100%;
-        background-color: #FFFFFF;
-    }
     .header{
         max-width: 1200px;
         margin: 0 auto;
@@ -34,9 +320,7 @@ nav, main, .footer {
     }
 
     .header-1{
-        display: flex;
-        width: 380px;
-        font-size: 14px;
+        font-size: 0.9em;
         font-weight: 600;
         justify-self: left;
         background: #FFFFFF;
@@ -56,162 +340,55 @@ nav, main, .footer {
     .header-2{
         justify-self: center;
     }
-
-    .header-2 img{
-        max-width: 150px;
-    }
-
-    .header-3{
-        display: flex;
-        justify-self: right;
-
-    }
-
-    .header-3 p{
-        color: #EA2F2F;
-        align-self: center;
-        margin-right: 10px;
-    }
-
-    .header-3 a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1em;
-        border-radius: 8px;
-        background: #EA2F2F;
-        display: flex;
-        padding: 8px 10px;
-        align-items: center;
-        gap: 4px;
-    }
     
     .cardapio{
         background-size: 1200px 1000px;
-        margin-bottom: 0;
         max-height: 230px;
-
-        max-width: 1200px;
-        overflow: hidden;
-        position: relative;
-        display: grid;
-        border-radius: 8px;
-        background-color: rgb(233, 91, 45);
-        order: 0;
-        text-align: center;
-        -webkit-box-pack: center;
-        align-items: center;
-        background-image: url('sources/Cardapio.jpg');
-        background-position: 50% 50%;
-        height: calc(100vh - 155px);
-        background-repeat: no-repeat;
-        margin: 1.5em auto;
+        margin: 1.5em auto 0 auto;
     }
 
     .cardapio h1{
-        font-size: 3.5em;
-        font-family: "veneerregular", sans-serif;
-        font-weight: 300;
-        color: #FFF;
-    }
-    .header-contact a {
-        font-size: 1.2em;
+        font-size: 4em;
     }
 
     .diamenu {
+        max-width: 1200px;
         margin: 25px auto;
         column-gap: 25px;
-        max-width: 1200px;
-        overflow: unset;
-        display: flex;
-        padding: 12px 16px;
-        align-items: center;
         gap: 16px;
-        flex: 1 0 0;
-        border-radius: 16px;
-        background: #FFF;
-    }
-
-    .diamenu :hover{
-        background-color: #ffc84f;
+        overflow: unset;
     }
 
     .diamenu h2{
         max-width: 120px;
-        color: #3C1518;
-        font-family: 'Montserrat', sans-serif;
         font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 16px;
     }
 
     .diamenu-item{
         height: 40px;
         width: 100%;
         font-size: 2em;
-        display: flex;
-        padding: 8px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        flex: 1 0 0;
-    }
-
-    .selected {
-        display: flex;
-        padding: 16px;
-        flex: 1 0 0;
-        border-radius: 8px;
-        background: #FFBB24;
     }
 
     .secao h2{
-        margin: 0 0 20px;
         font-size: 38px;
-        color: #000;
-        padding: 10px;
-        border-radius: 4px;
-        cursor: pointer;
     }
     .conteudo{
         grid-template-columns: repeat(2, 1fr);
         gap: 80px;
         margin: 0 0 80px;
-        display: grid;
-    }
-    .desc{
-        margin-bottom: 20px;
-        display: none;
     }
     .menu-item{
-        grid-template-columns: [col1] 240px [col2] auto;
         margin: 0 0 0;
-        display: grid;
-        border: 1px solid #CCC;
-        padding: 10px;
-        border-radius: 4px;
-        background-color: #FFF;
-        gap: 15px;
-        align-items: start;
-    }
-
-    .item-img img {
-        width: 100%;
-        height: 100%;
-        margin-right: 20px;
-        object-fit: contain;
+        grid-template-columns: [col1] 240px [col2] auto;
     }
 
     .item-container{
         height: 270px;
-        position: relative;
-        min-height: 135px;
     }
 
     .item-container h1{
         font-size: 1.8em;
-        margin: 0;
-        max-width: 230px;
     }
 
     .item-desc{
@@ -220,518 +397,42 @@ nav, main, .footer {
 
     .price{
         font-size: 2.2em;
-        position:absolute;
-        font-weight: bold;
-        color: #ff0000;
-        margin-bottom: 0;
-        bottom: 0;
-        right: 0;
-        text-align:end;
-        align-items: end;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
     .tabela{
         font-size: 1.3em;
-        position:absolute;
-        font-weight: bold;
-        background-color: #ea2f2f;
-        color: #fff;
-        margin-bottom: 0;
-        bottom: 0;
-        right: 0;
-        text-align:end;
-        align-items: end;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-        display: flex;
+        padding: 8px;
     }
-    .tabela img{
-        display: flex;
-        color: #FFFFFF;
-        max-width: 25px;
-        align-self: end;
-        margin-left: 4px;
-    }
-    footer{
-        width: 100%;
-        background: #EA2F2F;
-        color: #FFFFFF;
-        padding-bottom: 16px;
-    }
-
-    footer iframe{
-        margin: 15px 0 5px 0;
-        border-radius: 25px;
-    }
-
-    footer .linha{
-        width: 100%;
-        height: 2px;
-        background: #BB1E1E;
-        margin-bottom: 10px;
-    }
-
-    footer p{
-        display: flex;
-        justify-content: center;
+    @media (max-width: 1106px) {
+        .tabela{
+            font-size: 1em;
+        }
     }
 
     .whatsapp {
-        position: fixed;
-        right: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: bold;
-        color: #fff;
-        background-color: #25d366;
-        width: 65px;
-        height: 65px;
-        border-radius: 100px;
-        z-index: 999;
-        transition: all 0.3s ease-in-out;
         bottom: 20px;
-    }
-
-    .whatsapp:hover {
-        transform: scale(1.05);
-    }
-
-    .whatsapp .whatsapp-icon {
-        font-size: 38px;
-    }
-
-    .whatsapp .whatsapp-text {
-        display: none;
-    }
-
-    .whatsapp:hover .whatsapp-text {
-        display: block;
-        position: absolute;
-        right: 100%;
-        margin-right: 10px;
-        padding: 5px 10px;
-        background-color: #25d366;
-        border-radius: 10px;
-        font-size: 12px;
-        line-height: 1.2;
-    }
-
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
     }
 
     .modal-conteudo {
         font-size: 1.2em;
         max-width: 700px;
-        background-color: #fff;
-        padding: 20px;
-        width: 80%;
-        position: fixed;
-        z-index: 9999;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 15px;
     }
 
     .modal-conteudo h2{
         font-size: 2.5em;
     }
 
-    table {
-        margin-top: 15px;
-        width: 100%;
-        border-collapse: collapse;
-    }
-
     .fechar {
         font-size: 40px;
-        margin-top: -4px;
-        color: #aaa;
-        float: right;
-        font-weight: bold;
-        cursor: pointer;
-        margin-right: 3px;
-    }
-    .fechar:hover, .fechar:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
     }
 
-
-    table th,
-    table td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-    table th:first-child,
-    table td:first-child {
-        width: 25%;
-    }
-
-    table th:nth-child(2),
-    table td:nth-child(2) {
-        width: 35%;
-    }
-
-    table th:nth-child(3),
-    table td:nth-child(3) {
-        width: 20%;
-    }
-
-    table th:nth-child(4),
-    table td:nth-child(4) {
-        width: 20%;
+    table {
+        margin-top: 15px;
     }
 }
 
 /* Tablet */
 @media (min-width: 34.21em) and (max-width: 63.99em) {
-
-    .cardapio{
-        max-width: 1200px;
-        max-height: 140px;
-        overflow: hidden;
-        margin: 1.5em auto 15px auto;
-        position: relative;
-        display: grid;
-        border-radius: 8px;
-        background-color: rgb(233, 91, 45);
-        order: 0;
-        text-align: center;
-        -webkit-box-pack: center;
-        align-items: center;
-        background-image: url('sources/Cardapio.jpg');
-        background-size: 400px 334px;
-        background-position: 50% 50%;
-        height: calc(100vh - 155px);
-        background-repeat: no-repeat;
-    }
-
-    .cardapio h1{
-        font-size: 2em;
-        font-family: "veneerregular";
-        font-weight: 300;
-        color: #FFF;
-    }
-
-    /* Estilo do navegador do dia */
-
-    .diamenu{
-        display: flex;
-        padding: 12px 16px;
-        align-items: center;
-        gap: 16px;
-        flex: 1 0 0;
-        border-radius: 16px;
-        background: #FFF;
-        margin: auto auto 20px;
-    }
-
-    .diamenu-item{
-        display: flex;
-        padding: 8px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        flex: 1 0 0;
-        font-size: 5px;
-    }
-
-    .diamenu :hover{
-        background-color: #ffc84f;
-    }
-
-    .diamenu h2{
-        color: #3C1518;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 16px; /* 66.667% */
-    }
-
-    .selected {
-        display: flex;
-        padding: 16px;
-        flex: 1 0 0;
-        border-radius: 8px;
-        background: #FFBB24;
-    }
-
-    /* Estilos da descrição*/
-
-    .desc{
-        margin-bottom: 20px;
-        display: none;
-    }
-
-    /* Estilos específicos das seções do cardápio */
-
-    .secao h2 {
-        font-size: 38px;
-        color: #000;
-        padding: 10px;
-        border-radius: 4px;
-        cursor: pointer;
-        margin: 0px 0px 20px;
-    }
-
-    /* Estilos da disposição itens do cardápio */
-
-    .conteudo {
-        display: grid;
-        margin: 20px 0px 15px;
-    }
-
-    /* Estilos dos itens do cardápio */
-
-    .menu-item {
-        display: grid;
-        margin: 0px 0px 25px;
-        border: 1px solid #CCC;
-        padding: 10px;
-        border-radius: 4px;
-        background-color: #FFF;
-        grid-template-columns: [col1] 120px [col2] auto;
-        gap: 15px;
-        align-items: start;
-    }
-
-    .item-img img {
-        width: 100%;
-        height: 100%;
-        margin-right: 20px;
-        object-fit: contain;
-    }
-
-    .item-container h1 {
-        margin-bottom: 10px;
-        margin: 0px;
-        font-size: 1.5em;
-        max-width: 230px;
-    }
-
-    .item-container{
-        position: relative;
-        min-height: 135px;
-    }
-
-    .item-desc{
-        padding-bottom: 27px;
-    }
-
-    .price {
-        position:absolute;
-        font-weight: bold;
-        color: #ff0000;
-        margin-bottom: 0;
-        bottom: 0;
-        right: 0;
-        text-align:end;
-        align-items: end;
-        font-size: 1.3em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .tabela{
-        position:absolute;
-        font-weight: bold;
-        background-color: #ea2f2f;
-        color: #fff;
-        margin-bottom: 0;
-        bottom: 0;
-        right: 0;
-        text-align:end;
-        align-items: end;
-        font-size: 1.3em;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-        display: flex;
-    }
-
-    .tabela img{
-        display: flex;
-        color: #FFFFFF;
-        max-width: 25px;
-        align-self: end;
-        margin-left: 4px;
-    }
-
-    footer{
-        width: 100%;
-        background: #EA2F2F;
-        color: #FFFFFF;
-        padding-bottom: 16px;
-    }
-
-    footer iframe{
-        margin: 15px 0 5px 0;
-        border-radius: 25px;
-    }
-
-    footer .linha{
-        width: 100%;
-        height: 2px;
-        background: #BB1E1E;
-        margin-bottom: 10px;
-    }
-
-    footer p{
-        display: flex;
-        justify-content: center;
-    }
-
-    /* Botão whatsapp */
-
-    .whatsapp {
-        position: fixed;
-        right: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: bold;
-        color: #fff;
-        background-color: #25d366;
-        width: 65px;
-        height: 65px;
-        border-radius: 100px;
-        z-index: 999;
-        transition: all 0.3s ease-in-out;
-        bottom: 30px;
-    }
-
-    .whatsapp:hover {
-        transform: scale(1.05);
-    }
-
-    .whatsapp .whatsapp-icon {
-        font-size: 38px;
-    }
-
-    .whatsapp .whatsapp-text {
-        display: none;
-    }
-
-    .whatsapp:hover .whatsapp-text {
-        display: block;
-        position: absolute;
-        right: 100%;
-        margin-right: 10px;
-        padding: 5px 10px;
-        background-color: #25d366;
-        border-radius: 10px;
-        font-size: 12px;
-        line-height: 1.2;
-    }
-
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .modal-conteudo {
-        background-color: #fff;
-        padding: 20px;
-        width: 80%;
-        max-width: 500px;
-        position: fixed;
-        z-index: 9999;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 15px;
-    }
-
-    .modal-conteudo h2{
-        font-size: 2em;
-    }
-
-    .fechar {
-        color: #aaa;
-        float: right;
-        font-size: 30px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: -4px;
-        margin-right: 3px;
-    }
-
-    .fechar:hover,
-    .fechar:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-    }
-
-    table th,
-    table td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-    table th:first-child,
-    table td:first-child {
-        width: 25%;
-    }
-
-    table th:nth-child(2),
-    table td:nth-child(2) {
-        width: 35%;
-    }
-
-    table th:nth-child(3),
-    table td:nth-child(3) {
-        width: 20%;
-    }
-
-    table th:nth-child(4),
-    table td:nth-child(4) {
-        width: 20%;
-    }
-
-
-
-
-
-    header {
-        width: 100%;
-        background-color: #FFFFFF;
-    }
-
     .header{
         display: grid;
         grid-template-areas:
@@ -740,7 +441,6 @@ nav, main, .footer {
     }
 
     .header-1{
-        display: flex;
         background: #EA2F2F;
         color: #FFFFFF;
         justify-content: center;
@@ -763,42 +463,93 @@ nav, main, .footer {
         justify-self: left;
     }
 
-    .header-2 img{
-        max-width: 150px;
+    .cardapio{
+        background-size: 600px 500px;
+        max-height: 190px;
+        margin: 1.5em auto 15px auto;
+    }
+    @media (min-width: 37.5em){
+        .cardapio{
+            background-size: 800px 666px;
+        }
+    }
+    @media (min-width: 50em){
+        .cardapio{
+            background-size: 1020px 850px;
+        }
     }
 
-    .header-3{
-        display: flex;
-        justify-self: right;
-
+    .cardapio h1{
+        font-size: 3em;
     }
 
-    .header-3 p{
-        color: #EA2F2F;
-        align-self: center;
-        margin-right: 10px;
+    .diamenu{
+        gap: 16px;
+        margin: auto auto 20px;
     }
 
-    .header-3 a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1em;
-        border-radius: 8px;
-        background: #EA2F2F;
-        display: flex;
-        padding: 8px 10px;
-        align-items: center;
-        gap: 4px;
+    .diamenu h2{
+        font-size: 24px;
+    }
+
+    .diamenu-item{
+        font-size: 5px;
+    }
+
+    .secao h2 {
+        font-size: 38px;
+    }
+
+    .conteudo {
+        margin: 20px 0 15px;
+    }
+
+    .menu-item {
+        margin: 0 0 25px;
+        grid-template-columns: [col1] 120px [col2] auto;
+    }
+
+    .item-container h1 {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+
+    .item-desc{
+        padding-bottom: 50px;
+    }
+
+    .price {
+        font-size: 1.8em;
+    }
+
+    .tabela{
+        font-size: 1.2em;
+        padding: 7px;
+    }
+
+    .whatsapp {
+        bottom: 30px;
+    }
+
+    .modal-conteudo {
+        max-width: 500px;
+    }
+
+    .modal-conteudo h2{
+        font-size: 2em;
+    }
+
+    .fechar {
+        font-size: 30px;
+    }
+
+    table {
+        margin-top: 10px;
     }
 }
 
 /* Celular*/
 @media (max-width: 34.2em) {
-    header {
-        width: 100%;
-        background-color: #FFFFFF;
-    }
-
     .header{
         display: grid;
         grid-template-areas:
@@ -807,7 +558,6 @@ nav, main, .footer {
     }
 
     .header-1{
-        display: flex;
         background: #EA2F2F;
         color: #FFFFFF;
         justify-content: center;
@@ -831,298 +581,70 @@ nav, main, .footer {
         padding: 10px 5px 10px 10px;
     }
 
-    .header-2 img{
-        max-width: 150px;
-    }
-
     .header-3{
-        display: flex;
-        justify-self: right;
         padding: 10px 10px 10px 5px;
     }
 
     .header-3 p{
-        color: #EA2F2F;
-        align-self: center;
-        margin-right: 10px;
         display: none;
-    }
-
-    .header-3 a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1em;
-        border-radius: 8px;
-        background: #EA2F2F;
-        display: flex;
-        padding: 8px 10px;
-        align-items: center;
-        gap: 4px;
     }
 
     .cardapio{
-        max-width: 1200px;
+        background-size: 600px 500px;
         max-height: 140px;
-        overflow: hidden;
         margin: 1.5em auto 15px auto;
-        position: relative;
-        display: grid;
-        border-radius: 8px;
-        background-color: rgb(233, 91, 45);
-        order: 0;
-        text-align: center;
-        -webkit-box-pack: center;
-        align-items: center;
-        background-image: url('sources/Cardapio.jpg');
-        background-size: 400px 334px;
-        background-position: 50% 50%;
-        height: calc(100vh - 155px);
-        background-repeat: no-repeat;
     }
 
     .cardapio h1{
-        font-size: 2em;
-        font-family: "veneerregular";
-        font-weight: 300;
-        color: #FFF;
+        font-size: 2.5em;
     }
 
-    /* Estilo do navegador do dia */
-
     .diamenu{
-        display: flex;
-        padding: 12px 16px;
-        align-items: center;
         gap: 8px;
-        flex: 1 0 0;
-        border-radius: 16px;
-        background: #FFF;
         margin: auto auto 20px;
     }
 
-    .diamenu-item{
-        display: flex;
-        padding: 8px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        flex: 1 0 0;
-    }
-
-    .diamenu :hover{
-        background-color: #ffc84f;
-    }
-
     .diamenu h2{
-        color: #3C1518;
-        font-family: 'Montserrat', sans-serif;
         font-size: 1.2em;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 16px; /* 66.667% */
     }
-
-    .selected {
-        display: flex;
-        padding: 16px;
-        flex: 1 0 0;
-        border-radius: 8px;
-        background: #FFBB24;
-    }
-
-    /* Estilos da descrição*/
-
-    .desc{
-        margin-bottom: 20px;
-        display: none;
-    }
-
-    /* Estilos específicos das seções do cardápio */
 
     .secao h2 {
         font-size: 2em;
-        color: #000;
-        padding: 10px;
-        border-radius: 4px;
-        cursor: pointer;
-        margin: 0px 0px 20px;
     }
-
-    /* Estilos da disposição itens do cardápio */
 
     .conteudo {
-        display: grid;
-        margin: 20px 0px 15px;
+        margin: 20px 0 15px;
     }
-
-    /* Estilos dos itens do cardápio */
 
     .menu-item {
-        display: grid;
-        margin: 0px 0px 25px;
-        border: 1px solid #CCC;
-        padding: 10px;
-        border-radius: 4px;
-        background-color: #FFF;
+        margin: 0 0 25px;
         grid-template-columns: [col1] 120px [col2] auto;
-        gap: 15px;
-        align-items: start;
-    }
-
-    .item-img img {
-        width: 100%;
-        height: 100%;
-        margin-right: 20px;
-        object-fit: contain;
     }
 
     .item-container h1 {
         margin-bottom: 10px;
-        margin: 0px;
         font-size: 1.5em;
-        max-width: 230px;
-    }
-
-    .item-container{
-        position: relative;
-        min-height: 135px;
     }
 
     .item-desc{
-        padding-bottom: 37px;
+        padding-bottom: 40px;
     }
 
     .price {
-        position:absolute;
-        font-weight: bold;
-        color: #ff0000;
-        margin-bottom: 0;
-        bottom: 0;
-        right: 0;
-        text-align:end;
-        align-items: end;
         font-size: 1.6em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
     .tabela{
-        position:absolute;
-        font-weight: bold;
-        background-color: #ea2f2f;
-        color: #fff;
-        margin-bottom: 0;
-        bottom: 0;
-        right: 0;
-        text-align:end;
-        align-items: center;
         font-size: 1em;
         padding: 5px;
-        cursor: pointer;
-        border-radius: 5px;
-        display: flex;
-        align-self: center;
     }
-
-    .tabela img{
-        display: flex;
-        color: #FFFFFF;
-        max-width: 25px;
-        align-self: end;
-        margin-left: 4px;
-    }
-
-    footer{
-        width: 100%;
-        background: #EA2F2F;
-        color: #FFFFFF;
-        padding-bottom: 16px;
-    }
-
-    footer iframe{
-        margin: 15px 0 5px 0;
-        border-radius: 25px;
-    }
-
-    footer .linha{
-        width: 100%;
-        height: 2px;
-        background: #BB1E1E;
-        margin-bottom: 10px;
-    }
-
-    footer p{
-        display: flex;
-        justify-content: center;
-    }
-
-    /* Botão whatsapp */
 
     .whatsapp {
-        position: fixed;
-        right: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: bold;
-        color: #fff;
-        background-color: #25d366;
-        width: 65px;
-        height: 65px;
-        border-radius: 100px;
-        z-index: 999;
-        transition: all 0.3s ease-in-out;
         bottom: 30px;
     }
 
-    .whatsapp:hover {
-        transform: scale(1.05);
-    }
-
-    .whatsapp .whatsapp-icon {
-        font-size: 38px;
-    }
-
-    .whatsapp .whatsapp-text {
-        display: none;
-    }
-
-    .whatsapp:hover .whatsapp-text {
-        display: block;
-        position: absolute;
-        right: 100%;
-        margin-right: 10px;
-        padding: 5px 10px;
-        background-color: #25d366;
-        border-radius: 10px;
-        font-size: 12px;
-        line-height: 1.2;
-    }
-
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
     .modal-conteudo {
-        background-color: #fff;
-        padding: 20px;
-        width: 80%;
         max-width: 500px;
-        position: fixed;
-        z-index: 9999;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 15px;
     }
 
     .modal-conteudo h2{
@@ -1130,79 +652,11 @@ nav, main, .footer {
     }
 
     .fechar {
-        color: #aaa;
-        float: right;
         font-size: 30px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: -4px;
-        margin-right: 3px;
-    }
-
-    .fechar:hover,
-    .fechar:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
     }
 
     table {
-        width: 100%;
-        border-collapse: collapse;
         margin-top: 10px;
     }
-
-    table th,
-    table td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-    table th:first-child,
-    table td:first-child {
-        width: 25%;
-    }
-
-    table th:nth-child(2),
-    table td:nth-child(2) {
-        width: 35%;
-    }
-
-    table th:nth-child(3),
-    table td:nth-child(3) {
-        width: 20%;
-    }
-
-    table th:nth-child(4),
-    table td:nth-child(4) {
-        width: 20%;
-    }
-
 }
 
-
-
-/* Adicionais */
-@media (min-width: 25em){
-    .cardapio{
-        background-size: 600px 500px;
-    }
-}
-
-@media (min-width: 37.5em){
-    .cardapio{
-        background-size: 800px 666px;
-        max-height: 190px;
-    }
-
-    .cardapio h1{
-        font-size: 3em;
-    }
-}
-
-@media (min-width: 50em){
-    .cardapio{
-        background-size: 1200px 1000px;
-    }
-}
