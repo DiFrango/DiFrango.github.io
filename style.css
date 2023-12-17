@@ -159,6 +159,8 @@ header {
     text-align: end;
     align-items: end;
     text-shadow: 2px 2px 0.25rem rgba(0, 0, 0, 0.3);
+
+    display:none;
 }
 .tabela{
     display: flex;
@@ -173,6 +175,8 @@ header {
     align-items: center;
     cursor: pointer;
     border-radius: 0.3125rem;
+
+    display: none;
 }
 .tabela img{
     display: flex;
@@ -180,6 +184,8 @@ header {
     max-width: 1.5625rem;
     align-self: end;
     margin-left: 0.25rem;
+
+    display: none;
 }
 
 
