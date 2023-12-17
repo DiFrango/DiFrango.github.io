@@ -148,7 +148,11 @@ $(document).ready(function() {
     // fechartd();
 
      setTimeout(function() {
-       alert("Nosso cardápio ainda está em desenvolvimento, agradecemos a compreensão");
+       alert("Todos os valores devem ser consultados devido as festas, agradecemos a compreensão.");
      }, 1000);
+
+    //setTimeout(function() {
+    //   alert("Nosso cardápio ainda está em desenvolvimento, agradecemos a compreensão");
+    // }, 1000);
     
   });
