@@ -62,11 +62,15 @@ $(document).ready(function() {
     });
     
     $('#abrirtulipa').click(function(){
-      $('#especial').css('display', 'block');
+      $('#tulipa').css('display', 'block');
     });
 
     $('.fechar').click(function(){
       $('#especial').css('display', 'none');
+    });
+
+    $('.fechar').click(function(){
+      $('#tulipa').css('display', 'none');
     });
 
     //arrozbranco
