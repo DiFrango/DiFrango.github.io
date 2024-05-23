@@ -1,7 +1,7 @@
 {
   "name": "Difrango",
   "short_name": "Difrango",
-  "start_url": "/",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#2196f3",
