@@ -3,10 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #141414;
     background: #F2F2F2;
 }
 
@@ -18,6 +21,88 @@ nav, main, .footer {
 /*
     ESTILOS GLOBAIS
 */
+
+#statusOpenClose{
+    color: #EA2F2F;
+    display: flex;
+    align-items: center;
+    padding-left: 2px;
+}
+
+.container-full-msg {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: initial;
+    position: absolute;
+    background: #0000004f;
+    z-index: 1000;
+}
+
+.ct-bg-msg{
+    margin-top: 2%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    display: none;
+    height: 150px;
+    width: 500px;
+}
+
+.content-msg{
+    display: block;
+}
+
+.text-msg{
+    width: 100%;
+    padding: 1% 5% 2% 5%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #141414;
+}
+
+.ct-btn-msg{
+    padding: 2% 0 0 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;;
+}
+
+.btn-msg{
+    width: 120px;
+    text-align: center;
+    background: #FFBB24;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    padding: 1.5% 4%;
+    border-radius: 15px;
+}
+
+.btn-msg:hover{
+    background: #926606;
+}
+
+.ct-menu-msg {
+    display: flex;
+    justify-content: right;
+    align-items: initial;
+    padding: 1% 2.5% 0 2.5%;
+}
+
+.ct-menu-msg svg{
+    color: #1a1a1a;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.ct-menu-msg svg:hover{
+    color: #757575;
+}
+
 
 /* Header */
 header {
@@ -120,46 +205,73 @@ header {
     margin: 0 0 1.25rem;
     cursor: pointer;
     border-radius: 0.25rem;
-    color: #000;
     padding: 0.625rem;
 }
 .conteudo {
     display: grid;
 }
+
 .menu-item {
     display: grid;
-    padding: 0.625rem;
-    border-radius: 0.25rem;
-    border: 1px solid #CCC;
+    padding: 5%;
+    border-radius: 0.5rem;
     background-color: #FFF;
     gap: 0.9375rem;
+    gap: 1rem;
     align-items: start;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+.zoom:hover {
+    background-color: #ffba246e;
+    transform: scale(1.05);
+}
+
 .item-img img {
     width: 100%;
     height: 100%;
     margin-right: 1.25rem;
     object-fit: contain;
+    border-radius: 10px;
 }
+
 .item-container{
     position: relative;
     min-height: 8.4375rem;
 }
+
 .item-container h1 {
     margin: 0;
     max-width: 14.375rem;
 }
+
 .price {
     position: absolute;
     font-weight: bold;
-    color: #ff0000;
+    color: #FFBB24;
     margin-bottom: 0;
     bottom: 0;
     right: 0;
     text-align: end;
     align-items: end;
-    text-shadow: 2px 2px 0.25rem rgba(0, 0, 0, 0.3);
 }
+
+.price {
+    position: absolute;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #FFBB24;
+    font-size: 1.8rem;
+    padding: 1% 5%;
+    border-radius: 15px;
+    margin-bottom: 0;
+    bottom: 0;
+    right: 0;
+    text-align: end;
+    align-items: end;
+}
+
 .tabela{
     display: flex;
     position:absolute;
@@ -173,7 +285,16 @@ header {
     align-items: center;
     cursor: pointer;
     border-radius: 0.3125rem;
+    cursor: pointer;
+    padding: 0 2%;
 }
+
+.tabela:hover {
+    background-color: #7e1818;
+    color: #fff;
+}
+
+
 .tabela img{
     display: flex;
     color: #FFFFFF;
@@ -189,6 +310,8 @@ footer{
     background: #EA2F2F;
     color: #FFFFFF;
     padding-bottom: 1rem;
+    font-weight: 200;
+    font-size: 0.9em;
 }
 footer iframe{
     margin: 0.9375rem 0 0.3125rem 0;
@@ -225,6 +348,7 @@ footer p{
     z-index: 999;
     transition: all 0.3s ease-in-out;
 }
+
 .whatsapp:hover {
     transform: scale(1.05);
 }
@@ -244,6 +368,25 @@ footer p{
     border-radius: 0.625rem;
     font-size: 0.75rem;
     line-height: 1.2;
+}
+
+.ifood {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 1000; 
+}
+
+.ifood-icon img {
+    width: 65px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.ifood-icon img:hover {
+    transform: scale(1.1);
 }
 
 
@@ -315,7 +458,6 @@ table th:nth-child(4), table td:nth-child(4) {
         display: grid;
         grid-template-columns: 3fr 1fr 3fr;
         align-items: center;
-        color: #000;
         padding: 0.3125rem;
     }
 
@@ -324,7 +466,6 @@ table th:nth-child(4), table td:nth-child(4) {
         font-weight: 600;
         justify-self: left;
         background: #FFFFFF;
-        color: black;
         padding: 0;
     }
 
@@ -395,7 +536,7 @@ table th:nth-child(4), table td:nth-child(4) {
     }
 
     .price{
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     .tabela{
@@ -432,6 +573,11 @@ table th:nth-child(4), table td:nth-child(4) {
 
 /* Tablet */
 @media (min-width: 34.21rem) and (max-width: 63.99rem) {
+
+    #statusOpenClose {
+        padding-left: 5px;
+    }
+
     .header{
         display: grid;
         grid-template-areas:
@@ -506,6 +652,7 @@ table th:nth-child(4), table td:nth-child(4) {
     .menu-item {
         margin: 0 0 1.5625rem;
         grid-template-columns: [col1] 7.5rem [col2] auto;
+
     }
 
     .item-container h1 {
@@ -549,6 +696,11 @@ table th:nth-child(4), table td:nth-child(4) {
 
 /* Celular*/
 @media (max-width: 34.2rem) {
+    
+    #statusOpenClose {
+        padding-left: 6px;
+    }
+
     .header{
         display: grid;
         grid-template-areas:
@@ -626,7 +778,7 @@ table th:nth-child(4), table td:nth-child(4) {
     }
 
     .item-desc{
-        padding-bottom: 2.5rem;
+        padding-bottom: 3rem;
     }
 
     .price {

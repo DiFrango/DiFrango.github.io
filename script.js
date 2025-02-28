@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+  //$('.container-full-msg').hide();
+    obterDiaSemana();
     var d = new Date(); // Cria um objeto Date com a data e hora atuais
     var weekday = d.getDay(); // Retorna o dia da semana (0-6), onde 0 é domingo e 6 é sábado
     if (weekday == 6) {
@@ -156,7 +159,105 @@ $(document).ready(function() {
     // }, 1000);
 
     setTimeout(function() {
-       alert("Nosso cardápio ainda está em desenvolvimento, agradecemos a compreensão");
+       //alert("Nosso cardápio ainda está em desenvolvimento, agradecemos a compreensão");
+       openMsg();
     }, 1000);
+
+    setInterval(alterarBackground, 3000);
+
+    $(window).resize(function () {
+      obterDiaSemana();
+  });
     
   });
+
+
+function openMsg(){
+
+  $('html, body').animate({
+    scrollTop: $('.container-full-msg').offset().top
+  }, 500); 
+
+  $('body').css('overflow', 'hidden');
+  $('height').css('height', '100%;');
+
+  $('.container-full-msg').css('display', 'flex');
+  $('.ct-bg-msg').slideDown('slow');
+  //$('.ct-bg-msg').css('display', 'flex');
+
+}
+
+function closeMsg(){
+  $('body').css('overflow', 'auto');
+  $('.container-full-msg').hide();
+}
+
+function openFrango(){
+  $('#rig-arrow').hide();
+  $('#down-arrow').show();
+}
+
+function closeFrango(){
+  $('#rig-arrow').show();
+  $('#down-arrow').hide();
+}
+
+function obterDiaSemana() {
+  let diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+  let dataAtual = new Date();
+  let diaSemana = diasSemana[dataAtual.getDay()];
+  let openOrClose = "Fechado";
+  let horaAtual = new Date().getHours();
+
+
+  if(diaSemana == "Sábado" || diaSemana == "Domingo"){
+    let status = (horaAtual >= 9 && horaAtual < 15) ? "Aberto" : "Fechado";
+    if(status == 'Aberto'){
+      $("#statusOpenClose").css('color', '#06bd34');
+      openOrClose = "Aberto";
+    }else{
+      $("#statusOpenClose").css('color', '#EA2F2F');
+      openOrClose = "Fechado";
+    }
+    
+  }
+
+  else if(diaSemana == "Segunda-feira" || diaSemana == "Terça-feira"){
+    $("#statusOpenClose").css('color', '#EA2F2F');
+    openOrClose = "Fechado";
+  }
+  
+  else{
+    let status = (horaAtual >= 10 && horaAtual < 16) ? "Aberto" : "Fechado";
+    if(status == 'Aberto'){
+      $("#statusOpenClose").css('color', '#fc9713');
+      openOrClose = "Somente encomendas";
+    }else{
+      $("#statusOpenClose").css('color', '#EA2F2F');
+      openOrClose = "Fechado";
+    }
+  }
+
+  let larguraTela = $(window).width();
+  let minWidth = 15.00 * 16; 
+  let maxWidth = 63.99 * 16;
+  if (larguraTela >= minWidth && larguraTela <= maxWidth) {
+    $("#statusOpenClose").css('color', '#FFFFFF');
+  }
+
+  $("#horario_atendimento_header").text(diaSemana + ":");
+  $("#statusOpenClose").text(openOrClose );
+}
+
+function alterarBackground() {
+  let imagens = [
+      "url('sources/Cardapio.jpg')",
+      "url('sources/Cardapio.jpg')",
+      "url('sources/Cardapio.jpg')",
+      "url('sources/Cardapio.jpg')"
+  ];
+
+  let indice = Math.floor(Math.random() * imagens.length);
+  $(".cardapio").css("background-image", imagens[indice]);
+
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="sources/fonts/fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <!-- Add manifest file -->
     <link rel="manifest" href="/manifest.json">
     <!-- Add service worker -->
@@ -42,7 +43,7 @@
                     </clipPath>
                 </defs>
             </svg>
-            <p>Nosso horário de atendimento é das 09h30 às 14h30</p>
+            <p id="horario_atendimento_header"><div id="statusOpenClose"></div></p>
         </div>
         <div class="header-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="129" height="64" viewBox="0 0 129 64" fill="none">
@@ -119,6 +120,26 @@
         </div>
     </header>
 
+    <div class="container-full-msg">
+        <div class="ct-bg-msg">
+            <div class="content-msg">
+
+                <div class="ct-menu-msg">
+                    <svg onclick="closeMsg();" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                      </svg>
+                </div>
+
+                <div class="text-msg">Nosso cardápio ainda está em desenvolvimento, agradecemos a compreensão!</div>
+
+                <div class="ct-btn-msg">                
+                    <button class="btn-msg" onclick="closeMsg();">Ok!</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <div class="cardapio">
         <h1>NOSSO CARDÁPIO</h1>
     </div>
@@ -140,9 +161,10 @@
             <p>Cardapio disponível apenas por encomenda prévia de 2 semanas, preços sob orçamento</p>
         </div>
         <section class="secao sabado domingo">
-            <h2>Frangos</h2>
+            <h2>Frangos
+            </h2>
             <div class="conteudo">
-                <div class="menu-item sabado domingo">
+                <div class="menu-item sabado domingo zoom">
                     <div class="item-img">
                         <img src="sources/testes/comum.png" alt="sem imagem">
                     </div>
@@ -152,9 +174,9 @@
                         <p class="price">R$ 50,00</p>
                     </div>
                 </div>
-                <div class="menu-item sabado domingo">
+                <div class="menu-item sabado domingo zoom">
                     <div class="item-img">
-                        <img src="sources/testes/recheado.png" alt="sem imagem">
+                        <img src="sources/testes/recheado2.png" alt="sem imagem">
                     </div>
                     <div class="item-container">
                         <h1>Recheado</h1>
@@ -162,7 +184,7 @@
                         <p class="price">R$ 58,00</p>
                     </div>
                 </div>
-                <div class="menu-item sabado domingo">
+                <div class="menu-item sabado domingo zoom">
                     <div class="item-img">
                         <img src="sources/testes/tulipa_assada.png" alt="sem imagem">
                     </div>
@@ -172,7 +194,7 @@
                         <p class="price">R$ 88,00/kg</p>
                     </div>
                 </div>
-                <div class="menu-item domingo">
+                <div class="menu-item domingo zoom">
                     <div class="item-img">
                         <img src="sources/testes/coxa_sobre.png" alt="sem imagem">
                     </div>
@@ -420,15 +442,18 @@
                 </div>
             </div>
         </section>
-        </main>
+    </main>
+
     <footer>
         <div class="footer">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d646.6106849947091!2d-46.31486893221121!3d-23.540327551269446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7a65662216c3%3A0xd19534110b0421f4!2sAssados%20e%20Rotisserie%20D&#39;FRANGO!5e0!3m2!1spt-BR!2sbr!4v1684640291163!5m2!1spt-BR!2sbr" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="linha"></div>
         <p>Todos os produtos estão sujeitos a disponibilidade. Todos os pesos mencionados são aproximados.</p>
         <p>&copy; 2023 D'frango Assados e Rotisseria - Todos os direitos reservados</p>
+        <p>Nosso horário de atendimento é das 09h30 às 14h30</p>
         </div>
     </footer>
+
     <a href="https://wa.me/+551147484632?" class="whatsapp" target="_blank">
         <div class="whatsapp-icon">
             <i class="fab fa-whatsapp"></i>
@@ -437,6 +462,14 @@
             Encomende aqui
         </div>
     </a>
+
+    <a href="https://www.ifood.com.br/delivery/suzano-sp/d-frango-assados-e-rotisseria-parque-suzano" class="ifood" target="_blank">
+        <div class="ifood-icon">
+            <img src="./sources/ifoodIcon.png">
+        </div>
+    </a>
+
+
 
     <!-- secao de modals -->
     <div id="frito" class="modal">
@@ -796,9 +829,6 @@
             </table>
         </div>
     </div>
-
-
-
 
 </body>
 </html>
